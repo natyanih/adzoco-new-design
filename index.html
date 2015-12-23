@@ -16,6 +16,7 @@
     <link href="css/latofonts.css" rel="stylesheet">
 
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
     <script src="http://cdn.jsdelivr.net/interact.js/1.2.6/interact.min.js"></script>
     <script src="http://maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
@@ -25,241 +26,133 @@
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/jquery.multiscroll.css" />     
     <link href="css/style.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <script type="text/javascript" src="js/jquery.easings.min.js"></script>
+    <script type="text/javascript" src="js/jquery.multiscroll.min.js"></script>
+
+    <script type="text/javascript">
+     $(document).ready(function() {
+            $('#myContainer').multiscroll({
+                sectionsColor: ['#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF'],
+                anchors      : ['first', 'second', 'third', 'fourth', 'fifth'],
+                menu         : '#main-nav',
+                css3         : true,
+                paddingTop   : '60px',
+                paddingBottom: '60px'
+            });
+        });
+    </script>
 </head>
 
 <body>
 
     <body>
-        <nav class="navbar navbar-trans-initial navbar-fixed-top" id="initial-nav-bar" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <a class="navbar-brand navbar-logo navbar-font-size" href="#"><i class="fa fa-paper-plane-o"></i> Adzoco</a>
+        <nav class="navbar navbar-trans-initial navbar-fixed-top nav-custom" id="initial-nav-bar" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand navbar-logo navbar-font-size" href="#"><img src="images/adzoco-logo.png" class="pull-left">&nbsp;<div class="pull-left logo-title bold">ADZOCO</div></a>
+                </div>
+                <div class="navbar-collapse collapse" id="navbar-collapsible">
+                    <ul class="nav navbar-nav navbar-right" id="main-nav">
+                        <li><a data-menuanchor="first" href="#first">Home</a></li>
+                        <li><a data-menuanchor="second" href="#second">How It Works</a></li>
+                        <li><a data-menuanchor="third" href="#third">FAQ</a></li>
+                        <li><a data-menuanchor="fourth" href="#fourth">Get Started</a></li>
+                        <li><a data-menuanchor="fifth" href="#fifth">Contact Us</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="navbar-collapse collapse" id="navbar-collapsible">
-              <ul class="nav navbar-nav navbar-right">
-                <li><a href="#section1">Home</a></li>
-                <li><a href="#section2">How It Works</a></li>
-                <li><a href="#section3">FAQ</a></li>
-                <li><a href="#section4">Contact Us</a></li>
-                <li><a href="#section5">Get Started</a></li>
-              </ul>
-            </div>
-          </div>
         </nav>
 
-        <section id="section1" class="jumbotron bg-primary section">
-          <div class="container">
-            <div>
-              <div class="row section1-header">
-                <div class="col-xs-12 col-sm-12 text-center">
-                  <h1>The perfect solution for extra Cash!</h1>
-                  <h2>Your window as a source of additional income.</h2>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-xs-12 col-md-3 col-sm-3 text-center">
-                  <img id="section1-img1" class="section1-image img-responsive animated rotateIn" src="res/section1/sec1-img1.png" style="width: 100%">
-                  <h2>Your Window</h2>
-                </div>
-
-                <div class="col-xs-12 col-md-1 col-sm-1 section1-symbol-center">
-                  <span> <h1>+</h1> </span>
-                </div>
-
-                <div class="col-xs-12 col-md-3 col-sm-3 text-center">
-                  <img id="section1-img2" class="section1-image img-responsive animated rotateIn" src="res/section1/advertisers.png">
-                  <h2>Our Advertisement Network</h2>
-                </div>
-
-                <div class="col-xs-12 col-md-2 col-sm-2 section1-symbol-center">
-                  <span> <h1>=</h1> </span>
-                </div>
-
-                <div class="col-xs-12 col-md-3 col-sm-3 text-center">
-                  <img id="section1-img3" class="section1-image img-responsive animated rotateIn" src="res/section1/sec1-img3.png">
-                  <h2>Make Money</h2>
-                </div>
-              </div>
+        <div class="ms-left">
+            <div class="ms-section left" id="left1">
+                <h1>Make money with your window space by partnering with Adzoco.</h1>
+                <p class="text-light-gray">Simply list your window space and we do the rest.</p>
+                <button class="btn btn-primary btn-lg">Find out more! <i class="fa fa-arrow-circle-down"></i>
+</button>
             </div>
 
-          </div>
-        </section>
-
-        <section class="container income-section">
-            <div class="row no-gutter">
-                <div class="col-xs-12 col-sm-6 col-md-4">
-                    <h1 class="text-blue light">How It Works</h1>
-                    <p>With few easy steps, you can start earning from your unused window space.</p>
-                    <br><br><br><br><br>
-                    <img data-toggle="modal" data-target="#howItWorksModal" class="animated flipInX video-loader" src="res/section2/sec2-video.png">
-
-
-                    <!-- Modal -->
-                    <div id="howItWorksModal" class="modal fade" role="dialog">
-                      <div class="modal-dialog modal-lg">
-
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                          <div class="modal-body">
-                            <iframe width="860" height="600" src="https://www.youtube.com/embed/hC7pcCBXjzs" frameborder="0" allowfullscreen></iframe>
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                          </div>
-                        </div>
-
-                      </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-8">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-5 col-sm-offset-1">
-                          <h2 class="light text-blue">1. List your window</h2>
-                          <img src="images/new-window.jpg" class="img-responsive" alt="List your window.">
-                        </div>
-                        <div class="col-xs-12 col-sm-5 col-sm-offset-1">
-                            <h2 class="light text-blue">2. Accept offers</h2>
-                            <img src="images/accept-offers.jpg" class="img-responsive" alt="Accept bid offers">
-                        </div>
-                        <div class="col-xs-12 col-sm-5 col-sm-offset-1">
-                            <h2 class="light text-blue">3. Install the poster</h2>
-                            <img src="images/poster-installation.jpg" class="img-responsive" alt="Install poster">
-                        </div>
-                        <div class="col-xs-12 col-sm-5 col-sm-offset-1">
-                            <h2 class="light text-blue">4. Make money</h2>
-                            <img src="images/make-money.jpg" class="img-responsive" alt="Make Money">
-                        </div>
-                    </div>
-                </div>
+            <div class="ms-section left" id="left2">
+                <h2 class="text-white bg-orange">Step 1: List your window</h2>
+                <h2 class="text-white bg-orange">Step 2: Accept offers</h2>
+                <h2 class="text-white bg-orange">Step 3: Install the poster</h2>
+                <h2 class="text-white bg-orange">Step 4: Make money</h2>
             </div>
-        </section>
-        <section class="jumbotron bg-default concept-section">
-            <div class="container">
-                <div class="row no-gutter">
-                    <h1 class="light text-blue concept-section-heading centered">How can Adzoco help you earn money?</h1>
-                    <p class="centered">Adzoco is transforming the way people advertise. We turn unused private property into viral advertising displays to deliver localized exposure for growing and established companies. By connecting businesses with individuals that offer display space, Adzoco makes publicity more accessible and creates easy income for everyone involved.</p>
 
-                    <div class="col-xs-12 col-sm-4 centered">
-                        <i class="fa fa-users concept-icon text-dark-blue centered"></i>
-                        <h2 class="text-blue">Multinational Companies</h2>
-                        <p>Established companies as well as local businesses with budget for advertisement are interested in your windows.</p>
+            <div class="ms-section left" id="left3">
+                <h1>What's Adzoco?</h1>
+                <p class="text-light-gray">Adzoco is transforming the way people advertise. We turn unused private property into viral advertising displays to deliver localized exposure for growing and established companies. By connecting businesses with individuals that offer display space, Adzoco makes publicity more accessible and creates easy income for everyone involved.</p>
 
-                    </div>
-                    <div class="col-xs-12 col-sm-2 col-sm-offset-1 centered">
-                        <img src="images/window-1.png" />
-                    </div>
-                    <div class="col-xs-12 col-sm-4 col-sm-offset-1 centered">
-                        <i class="fa fa-weixin concept-icon text-dark-blue centered"></i>
-                        <h2 class="text-blue">Real-time bid offers</h2>
-                        <p>As long as you are connected to the internet, you can receive offers for your window space in real-time.</p>
-                    </div>
-
-                    <div class="clearfix visible-xs-block visible-sm-block visible-md-block visible-lg-block"></div>
-
-                    <div class="col-xs-12 col-sm-4 centered">
-                        <i class="fa fa-thumbs-o-up concept-icon text-dark-blue centered"></i>
-                        <h2 class="text-blue">Marketing tools to promote your ad space</h2>
-                        <p>Auto share in craiglist, facebook page posting and other social media promotions ensures that your ad space is exposed to even more possible advertisers.</p>
-                    </div>
-                    <div class="col-xs-12 col-sm-4 centered">
-                        <i class="fa fa-child concept-icon text-success centered" style="font-size: 196px"></i>
-                    </div>
-                    <div class="col-xs-12 col-sm-4 centered">
-                        <i class="fa fa-mobile-phone concept-icon text-dark-blue centered"></i>
-                        <h2 class="text-blue">Mobile app to be updated anywhere you are</h2>
-                        <p>As long as you have the Adzoco app installed in your mobile phones, you can will be updated anywhere you are.</p>
-                    </div>
-                </div>
+                <h1>Why you will love Adzoco?</h1>
+                <p class="text-light-gray">You don't have to pay anything, the poster is shipped to you free of charge. <i class="fa fa-hand-o-left"></i><br />
+                Receive monthly recurring payments <i class="fa fa-hand-o-left"></i></br />
+                Earn commissions by referring other people <i class="fa fa-hand-o-left"></i></p>
+                <h2 class="light">Everything we do is trackable, measurable and accurate to the dollar, so you can stop guessing and know your income in real time.</h2>
             </div>
-        </section>
-        <section class="container receive-section">
-            <div class="row no-gutter">
-                <div class="col-xs-12 col-sm-6 col-md-4">
-                    <h1 class="text-blue light">Receive monthly payments from our advertisers.</h1>
-                    <p><span class="bold">Watch us make you money out of your unused window space.</span> Everything we do is trackable, measurable and accurate to the dollar, so you can stop guessing and know your income in real time.</p>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-8">
-                    <img src="images/computer-with-dashboard.jpg" class="img-responsive" alt="Watch your earning." title="Watch your earning.">
-                </div>
+
+            <div class="ms-section left" id="left4">
             </div>
-        </section>
-        <section class="container explore-section">
-            <div class="row">
-                <h1 class="text-blue explore-heading light">Find out how many advertisers are near you.</h1>
-                <div class="col-xs-12 col-sm-12 col-md-12 no-gutter-container">
-                    <input type="text"
-                        id="geocomplete"
-                        class="explore-input col-xs-12 col-sm-8 col-md-8 text-gray"
-                        placeholder="Type in your address"
-                        autocomplete="off">
 
-                    <button class="btn btn-success bg-success explore-btn col-xs-12 col-sm-4 col-md-4"
-                        type="button">Search</button>
-                </div>
+            <div class="ms-section left contact-us" id="left5">
+                <h1>Contact Us</h1>
+                <h3 class="light text-light-gray">Give us a call at <span class="text-white bold">(+1) 800-298-1823</span> or email us at <a href="mailto:info@adzoco.com" class="text-white bold email">info@adzoco.com</a> to discuss.</h3>
+                <h1>Where we're located?</h1>
+                <p>404 45th Avenue #3,<br />San Francisco CA 94121<br /><br />Lahug, Cebu City<br />Philippines 6300</p>
 
-                <div class="col-xs-12 col-sm-12 col-md-12 no-gutter-container">
-                    <div class="col-xs-12 col-sm-8 col-md-8 explore-list no-gutter-container no-gutter">
-                        <h2 class="centered text-blue light">Available advertisers in your area</h2>
-                        <div id="advertiser-listing"></div>
-                    </div>
-                    <div class="col-xs-12 col-sm-4 col-md-4 canvas-container no-gutter-container">
-                        <div class="map-canvas"></div>
-
-                        <h3 class="text-blue">Amount already spent in your area.</h3>
-                        <h1 class="text-gray text-bold centered" id="amount">$300k</h1>
-                    </div>
-                </div>
+                <h1 class="text-light-gray"><i class="fa fa-wordpress"></i> <i class="fa fa-facebook-square"></i> <i class="fa fa-twitter-square"></i></h1>
             </div>
-        </section>
-        <section class="jumbotron bg-primary signup-section no-bottom-margin">
-            <div class="container">
-                <div class="row centered">
-                    <h1 class="bold">Ready to start earning?<br class="visible-xs" /> Signup Now!</h1>
+        </div>
+    
+    <div class="ms-right">
+        <div class="ms-section right" id="right1">
+        </div>
 
-                    <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 signup-form">
-                            <input type="email"
-                                class="form-control signup-input light pull-left"
-                                id="userEmail"
-                                placeholder="What's your email address?">
+        <div class="ms-section right" id="right2">
+            <h1>How it works?</h1>
+            <p class="text-light-gray">With few easy steps, you can start earning from your unused window space.</p>
+        </div>
 
-                            <button class="btn btn-success bg-success signup-btn pull-right bold"
-                                type="button">CONTINUE</button>
-                    </div>
-                </div>
+        <div class="ms-section right" id="right3">
+        </div>
+
+        <div class="ms-section right" id="right4">
+            <h1>Put your window to work for you!</h1>
+            <p class="text-light-gray">By signing up and listing your window, we'll expose your window to our network of advertisers: businesses that are interested in paying you for having their banner on your window.</p>
+            <hr />
+            <div class="form-group">
+                <label for="usr" class="signup-label text-light-gray light">Name:</label>
+                <input type="text" class="form-control input-lg" id="usr">
             </div>
-        </section>
-        <section class="jumbotron  bg-dark no-bottom-margin">
-            <div class="container">
-                <div class="row text-white light">
-                    <div class="col-xs-12 col-sm-6">
-                        <h2 class="light">Talk to us:</h2>
-
-                        <h3><a href="mailto:info@adzoco.com" class="text-white">info@adzoco.com</a><br />
-                        Tel: (+1) 800-298-1823</h3>
-                        <h1><i class="fa fa-facebook-square"></i> <i class="fa fa-twitter-square"></i> <i class="fa fa-google-plus-square"></i> <i class="fa fa-youtube-square"></i></h1>
-                    </div>
-
-                    <div class="col-xs-12 col-sm-6">
-                        <h2 class="light">Where we’re located:</h2>
-
-                        <h3>404 45th avenue #3,<br />
-                        San Francisco CA 94121</h3>
-
-                        <h3>Lahug, Cebu City<br />
-                        Philippines</h3>
-                    </div>
-                </div>
+            <div class="form-group">
+                <label for="email" class="signup-label text-light-gray light">Email:</label>
+                <input type="email" class="form-control input-lg" id="email">
             </div>
-        </section>
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+            <div class="form-group">
+                <label for="phone" class="signup-label text-light-gray light">Phone Number:</label>
+                <input type="text" class="form-control input-lg" id="phone">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-lg btn-primary" style="width:100%">Signup!</button>
+            </div>
+        </div>
+
+        <div class="ms-section right" id="right5">
+            <h1><img src="images/adzoco-logo.png" style="width:4.8rem" /> Adzoco, Inc.</h1>
+            <p class="text-light-gray">Helping you make money from your unused window space.</p>
+        </div>
+    </div>      
+
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="js/bootstrap.min.js"></script>
         <script src="js/ie10-viewport-bug-workaround.js"></script>
         <script src="js/knuth-shuffle.js"></script>
+        <script src="js/menu.js"></script>
         <script src="js/jquery.geocomplete.js"></script>
         <script type="text/javascript" src="js/locations.js"></script>
     </body>
