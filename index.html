@@ -18,7 +18,7 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
-    <script src="http://cdn.jsdelivr.net/interact.js/1.2.6/interact.min.js"></script>
+    <script src="js/interact.min.js"></script>
     <script src="http://maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -31,7 +31,7 @@
     <link href="css/animate.css" rel="stylesheet">
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script>
 
     <script type="text/javascript" src="js/jquery.easings.min.js"></script>
     <script type="text/javascript" src="js/jquery.multiscroll.min.js"></script>
@@ -40,7 +40,7 @@
      $(document).ready(function() {
             $('#myContainer').multiscroll({
                 sectionsColor: ['#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF'],
-                anchors      : ['first', 'second', 'third', 'fourth', 'fifth'],
+                anchors      : ['home', 'how-it-works', 'faq', 'get-started', 'contact-us'],
                 menu         : '#main-nav',
                 css3         : true,
                 paddingTop   : '60px',
@@ -60,11 +60,11 @@
                 </div>
                 <div class="navbar-collapse collapse" id="navbar-collapsible">
                     <ul class="nav navbar-nav navbar-right" id="main-nav">
-                        <li><a data-menuanchor="first" href="#first">Home</a></li>
-                        <li><a data-menuanchor="second" href="#second">How It Works</a></li>
-                        <li><a data-menuanchor="third" href="#third">FAQ</a></li>
-                        <li><a data-menuanchor="fourth" href="#fourth">Get Started</a></li>
-                        <li><a data-menuanchor="fifth" href="#fifth">Contact Us</a></li>
+                        <li><a data-menuanchor="home" href="#home">Home</a></li>
+                        <li><a data-menuanchor="how-it-works" href="#how-it-works">How It Works</a></li>
+                        <li><a data-menuanchor="faq" href="#faq">FAQ</a></li>
+                        <li><a data-menuanchor="get-started" href="#get-started">Get Started</a></li>
+                        <li><a data-menuanchor="contact-us" href="#contact-us">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
@@ -74,15 +74,44 @@
             <div class="ms-section left" id="left1">
                 <h1>Make money with your window space by partnering with Adzoco.</h1>
                 <p class="text-light-gray">Simply list your window space and we do the rest.</p>
-                <button class="btn btn-primary btn-lg">Find out more! <i class="fa fa-arrow-circle-down"></i>
-</button>
+                <a data-menuanchor="how-it-works" href="#how-it-works" class="btn btn-primary btn-lg">
+                    Find out more! <i class="fa fa-arrow-circle-down"></i>
+                </a>
             </div>
 
             <div class="ms-section left" id="left2">
-                <h2 class="text-white bg-orange">Step 1: List your window</h2>
+                <!-- <h2 class="text-white bg-orange">Step 1: List your window</h2>
                 <h2 class="text-white bg-orange">Step 2: Accept offers</h2>
                 <h2 class="text-white bg-orange">Step 3: Install the poster</h2>
-                <h2 class="text-white bg-orange">Step 4: Make money</h2>
+                <h2 class="text-white bg-orange">Step 4: Make money</h2> -->
+                    <div class="row div-steps">
+                        <div id="box1" class="col-sm-9 col-sm-offset-1 bg-blue-gray text-white" style="background-color: #263248; color: white">
+                            <div class="bg-orange text-white circle"><h1>1</h1></div>
+                            <h1>List your window</h1>
+                            <p>Signup for an account and then provide your window details.</p>
+                        </div>
+                    </div>
+                    <div class="row div-steps">
+                        <div id="box2" class="col-sm-9 col-sm-offset-2 bg-blue-gray text-white" style="display:block; text-align:left; background-color: #263248; color: white">
+                            <div class="bg-orange text-white circle"><h1>2</h1></div>
+                            <h1>Accept advertisers offer</h1>
+                            <p>You will receive offers from your advertisers, select the BEST offer for you.</p>
+                        </div>
+                    </div>
+                    <div class="row div-steps">
+                        <div id="box3" class="col-sm-9 col-sm-offset-1 bg-blue-gray text-white" style="display:block; text-align:left; background-color: #263248; color: white">
+                            <div class="bg-orange text-white circle"><h1>3</h1></div>
+                            <h1>Install the poster</h1>
+                            <p>Poster will be shipped to you, install it and then upload the image of the installed poster.</p>
+                        </div>
+                    </div>
+                    <div class="row div-steps">
+                        <div id="box4" class="col-sm-9 col-sm-offset-2 bg-blue-gray text-white" style="display:block; text-align:left; background-color: #263248; color: white">
+                            <div class="bg-orange text-white circle"><h1>4</h1></div>
+                            <h1>Make money</h1>
+                            <p>View online your income from the installed poster in real-time.</p>
+                        </div>
+                    </div>
             </div>
 
             <div class="ms-section left" id="left3">
@@ -93,7 +122,6 @@
                 <p class="text-light-gray">You don't have to pay anything, the poster is shipped to you free of charge. <i class="fa fa-hand-o-left"></i><br />
                 Receive monthly recurring payments <i class="fa fa-hand-o-left"></i></br />
                 Earn commissions by referring other people <i class="fa fa-hand-o-left"></i></p>
-                <h2 class="light">Everything we do is trackable, measurable and accurate to the dollar, so you can stop guessing and know your income in real time.</h2>
             </div>
 
             <div class="ms-section left" id="left4">
@@ -102,10 +130,13 @@
             <div class="ms-section left contact-us" id="left5">
                 <h1>Contact Us</h1>
                 <h3 class="light text-light-gray">Give us a call at <span class="text-white bold">(+1) 800-298-1823</span> or email us at <a href="mailto:info@adzoco.com" class="text-white bold email">info@adzoco.com</a> to discuss.</h3>
-                <h1>Where we're located?</h1>
+                <h2 style="padding-top:40px;">Where we're located?</h2>
                 <p>404 45th Avenue #3,<br />San Francisco CA 94121<br /><br />Lahug, Cebu City<br />Philippines 6300</p>
 
                 <h1 class="text-light-gray"><i class="fa fa-wordpress"></i> <i class="fa fa-facebook-square"></i> <i class="fa fa-twitter-square"></i></h1>
+                <br />
+                <br />
+                <p>Copyright &copy; 2016 Adzoco, Inc.</p>
             </div>
         </div>
     
@@ -119,6 +150,9 @@
         </div>
 
         <div class="ms-section right" id="right3">
+            <div class="col-xs-8 col-xs-offset-2" style="background-color: rgba(255,255,255,0.7); padding:15px">
+                <p class="text-dark-gray" style="font-size:30px !important;">Everything we do is trackable, measurable and accurate to the dollar, so you can stop guessing and know your income in real time.</p>
+            </div>
         </div>
 
         <div class="ms-section right" id="right4">
@@ -143,8 +177,11 @@
         </div>
 
         <div class="ms-section right" id="right5">
-            <h1><img src="images/adzoco-logo.png" style="width:4.8rem" /> Adzoco, Inc.</h1>
-            <p class="text-light-gray">Helping you make money from your unused window space.</p>
+            <div class="col-xs-8 col-xs-offset-2" style="background-color: rgba(255,255,255,0.7); padding:15px">
+                <h1><img src="images/adzoco-logo.png" style="width:4.8rem" /> Adzoco, Inc.</h1>
+                <p>"Monetize your unused window space."</p>
+            </div>
+            
         </div>
     </div>      
 
