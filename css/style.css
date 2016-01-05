@@ -181,8 +181,9 @@ section {
 }
 
 #right3 {
-	background: url(../images/window8.jpg);
+	background: url(../images/graph.jpg);
 	background-size: auto 100%;
+	background-position: left center;
 }
 
 #right5 {
@@ -234,4 +235,8 @@ section {
 	position      : absolute;
 	left : -4rem;
 	top : 2.0rem;
+}
+
+.circle > h1 {
+	margin-top: 1.5rem !important;
 }
