@@ -121,9 +121,9 @@ section {
 /*Navigation Bar*/
 .navbar-trans-initial {
 	color     : #263248;
-	min-height: 60px;
+	height: 60px;
 	z-index   : 100;
-	background: #FFFFFF;
+	background: rgba(255,255,255,0.7);
 
 	-webkit-box-shadow: 0 0.1rem 0.5rem 0 rgba(130,130,130,1);
 	-moz-box-shadow   : 0 0.1rem 0.5rem 0 rgba(130,130,130,1);
